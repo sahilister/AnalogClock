@@ -12,7 +12,9 @@
             let hour = tod.getHours();
             let min = tod.getMinutes();
             let sec = tod.getSeconds();
-
+            
+            if(min < 10)
+                min = "0" + min;
             if(sec < 10)
                 sec = "0" + sec;
             let showtime = hour+":" + min+":" + sec;
