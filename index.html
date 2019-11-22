@@ -1,9 +1,12 @@
 <html>
     <head>
-        <link type="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Analog Clock</title>
     </head>
     <body>
         <h1 id="time">Time</h1>
+
         <script>
             setInterval(() => {
             let change = document.getElementById('time');
@@ -13,6 +16,8 @@
             let min = tod.getMinutes();
             let sec = tod.getSeconds();
             
+            if(hour < 10) 
+                hour = "0" + hour;
             if(min < 10)
                 min = "0" + min;
             if(sec < 10)
@@ -21,5 +26,6 @@
             change.textContent = showtime; 
             }, 1000);  
         </script>
+
     </body>
 </html>
