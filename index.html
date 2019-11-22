@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link type="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="time">Time</h1>
+        <script>
+            setInterval(() => {
+            let change = document.getElementById('time');
+    
+            let tod = new Date();
+            let hour = tod.getHours();
+            let min = tod.getMinutes();
+            let sec = tod.getSeconds();
+
+            if(sec < 10)
+                sec = "0" + sec;
+            let showtime = hour+":" + min+":" + sec;
+            change.textContent = showtime; 
+            }, 1000);  
+        </script>
+    </body>
+</html>
