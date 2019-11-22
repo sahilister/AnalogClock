@@ -1,2 +1,3 @@
 # AnalogClock
-Simple 24 hour analog clock 
+
+Clock can be viewed at following [URL](https://analogclock.now.sh/).
