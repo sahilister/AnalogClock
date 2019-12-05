@@ -1,6 +1,7 @@
 body {
     padding: 12.5vw;
     font-family: "Ubuntu", sans-serif;    
+    color: ;
 }
 
 h1 {
@@ -10,4 +11,14 @@ h1 {
     display: flex;
     color: white;
 }
+
+
+/* for detecting dark theme  and making changes*/
+@media (prefers-color-scheme: dark) {   
+    body {
+      background-color: #282828;
+      color: #f3f3f3;
+    }
+}
+  
 
