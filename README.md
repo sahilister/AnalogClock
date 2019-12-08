@@ -1,3 +1,4 @@
-# AnalogClock
+# Analog Clock
+24 hour analog clock
 
-Clock can be viewed at following [URL](https://sahilister.github.io/AnalogClock/).
+### [Live Version](https://sahilister.github.io/AnalogClock/)
