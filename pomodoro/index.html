@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Pomodoro Clock</title>
+  </head>
+  <body>
+    <h1 id="time">Time</h1>
+    <script>
+        let min = 25
+        let sec = 0
+        
+      setInterval(() => {
+        let change = document.getElementById('time');
+
+        let showtime = min + ':'
+        showtime += sec < 10 ? '0' + sec : sec  //to pad zero for single digit numbers
+        
+        if(sec == 0) {
+          min -= 1
+          sec = 59
+        }
+        sec--
+    
+        change.textContent = showtime
+      }, 1000);  
+    </script>
+  </body>
+</html>
