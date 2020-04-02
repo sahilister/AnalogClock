@@ -4,26 +4,46 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <title>Pomodoro Clock</title>
   </head>
-  <body>
-    <h1 id="time">Time</h1>
+  <body class="container">
+    <h1 id="time">25:00</h1>
+
+    <button onclick='startTimer()'>Start</button>
+    <button>Stop</button>
+    <button>Reset</button>
     <script>
         let min = 25
         let sec = 0
-        
-      setInterval(() => {
+
+      function startTimer() {
+        setInterval(() => {
         let change = document.getElementById('time');
 
-        let showtime = min + ':'
+        let showtime 
+        showtime = min < 10 ? '0' + min : min
+        showtime += ':'
         showtime += sec < 10 ? '0' + sec : sec  //to pad zero for single digit numbers
         
         if(sec == 0) {
           min -= 1
           sec = 59
         }
-        sec--
-    
+        else 
+          sec--
+
         change.textContent = showtime
-      }, 1000);  
+       }, 1000);  //change this to start
+      }
+         //change this to start clock
+
+      // a clearIntervel function that stops execution on 25min
+      // a sound effect when clock reaches 00
+      // a start button that starts the clock
+      //a reset button that make min = 25, sec = 0
+      
     </script>
   </body>
 </html>
+
+
+
+

@@ -3,14 +3,29 @@ body {
     font-family: "Ubuntu", sans-serif;    
 }
 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h1 {
-    background-color: black;
+    /* background-color: white; */
+    /* padding: 12.5vw; */
     font-size: 18vw;
     justify-content: space-around;
     display: flex;
-    color: white;
+    color: black;
 }
 
+button {
+    justify-content: space-around;
+    font-size: 3vw;
+    background-color: white;
+    color: black;
+}
 
 /* for detecting dark theme  and making changes*/
 @media (prefers-color-scheme: dark) {   
