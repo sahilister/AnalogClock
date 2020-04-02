@@ -7,33 +7,35 @@
   <body class="container">
     <h1 id="time">25:00</h1>
 
-    <button onclick='startTimer()'>Start</button>
-    <button>Stop</button>
+    <button onclick='timer()'>Start</button>
+    <button onclick='stopTimer()'>Stop</button>
     <button>Reset</button>
-    <script>
+    <script type='text/javascript'>
         let min = 25
         let sec = 0
 
-      function startTimer() {
-        setInterval(() => {
-        let change = document.getElementById('time');
+      function timer() {
+        interval = setInterval(() => {
+          let change = document.getElementById('time');
+          let showtime 
 
-        let showtime 
-        showtime = min < 10 ? '0' + min : min
-        showtime += ':'
-        showtime += sec < 10 ? '0' + sec : sec  //to pad zero for single digit numbers
-        
-        if(sec == 0) {
-          min -= 1
-          sec = 59
-        }
-        else 
-          sec--
-
-        change.textContent = showtime
-       }, 1000);  //change this to start
+          showtime = min < 10 ? '0' + min : min
+          showtime += ':'
+          showtime += sec < 10 ? '0' + sec : sec  //to pad zero for single digit numbers
+          
+          if(sec == 0) {
+            min -= 1
+            sec = 59
+          }
+          else 
+            sec--
+          change.textContent = showtime
+        }, 1000);  //change this to start
       }
-         //change this to start clock
+
+      function stopTimer() {
+        clearInterval(interval)
+      }
 
       // a clearIntervel function that stops execution on 25min
       // a sound effect when clock reaches 00
