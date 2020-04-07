@@ -1,18 +1,44 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Pomodoro Clock</title>
   </head>
   <body class="container">
     <h1 id="time">25:00</h1>
 
-    <button onclick='startTimer()'>Start</button>
-    <button onclick='stopTimer()'>Stop</button>
+    <button class='toggle'>Start</button>  <!--this.disabled=true included to prevent double clicks which somehow speedies the  timer-->
+    <!-- <button onclick='stopTimer()'>Stop</button> -->
     <button onclick='resetTimer()'>Reset</button>
+
+
     <script type='text/javascript'>
+    const toggle = document.querySelector('.toggle')
+      
         let min = 25
         let sec = 0
+        let method = 0
+
+      function toggleButton () {
+        method = !method
+
+        method ?  startTimer() : stopTimer()
+        updateButton()
+      }
+
+      function updateButton() {
+        toggle.textContent = method ? 'Stop' : 'Start'
+      }
+
+      function displayTimer() {
+        let change = document.getElementById('time');
+        let showtime 
+        showtime = min < 10 ? '0' + min : min
+          showtime += ':'
+          showtime += sec < 10 ? '0' + sec : sec
+
+        change.textContent = showtime
+      }
 
       function startTimer() {
         interval = setInterval(() => {
@@ -23,7 +49,8 @@
           else 
             sec--
           displayTimer()
-        }, 1000);  //change this to start
+
+        }, 1000);  
       }
 
       function stopTimer() {
@@ -37,16 +64,7 @@
         stopTimer()
       }
 
-      function displayTimer() {
-        let change = document.getElementById('time');
-        let showtime 
-        showtime = min < 10 ? '0' + min : min
-          showtime += ':'
-          showtime += sec < 10 ? '0' + sec : sec
-
-        change.textContent = showtime
-      }
-
+      toggle.addEventListener('click', toggleButton)
     </script>
   </body>
 </html>
