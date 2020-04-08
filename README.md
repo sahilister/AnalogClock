@@ -1,4 +1,6 @@
-# Analog Clock
-24 hour analog clock with dark mode detection.
+#  Clock
+Clock & Pomodoro Timer with dark mode detection.
 
-### [Live Version](https://sahilister.github.io/AnalogClock/)
+### [Clock](https://sahilister.github.io/Clock/clock/)
+
+### [Pomodoro Timer](https://sahilister.github.io/Clock/pomodoro/)
