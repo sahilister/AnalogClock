@@ -48,9 +48,12 @@ function stopTimer () {
 }
 
 function resetTimer () {
-  min = 25
-  sec = 0
-  toggleButton()
+  if (min !== 25 && sec !== 0) {
+    min = 25
+    sec = 0
+    method = 0    // for stop button toggle --- case -time 23:00, clock already stopped, here reset of start/stop button not required
+    updateButton()
+  }
   displayTimer()
   stopTimer()
   audio.pause()
