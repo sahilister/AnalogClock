@@ -44,6 +44,7 @@ function startTimer () {
 
 function stopTimer () {
   clearInterval(interval)
+  audio.pause()
 }
 
 function resetTimer () {
