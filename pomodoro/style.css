@@ -22,6 +22,8 @@ button {
 @media (prefers-color-scheme: dark) {   
     body {
       background-color: #282828;
+    }
+    h1 {
       color: #f3f3f3;
     }
 }
