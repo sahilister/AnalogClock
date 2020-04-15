@@ -48,7 +48,7 @@ function stopTimer () {
 }
 
 function resetTimer () {
-  if (min !== 25 && sec !== 0) {
+  if (min !== 25) {
     min = 25
     sec = 0
     method = 0    // for stop button toggle --- case -time 23:00, clock already stopped, here reset of start/stop button not required
