@@ -13,7 +13,7 @@ function toggleButton () {
 }
 
 function updateButton () {
-  toggle.textContent = method ? 'Stop' : 'Start'
+  toggle.textContent = method ? 'Pause' : 'Start'
 }
 
 function displayTimer () {

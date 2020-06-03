@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./skeleton.min.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="apple-touch-icon" sizes="57x57" href="../assets/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../assets/apple-icon-60x60.png">
@@ -20,24 +21,22 @@
     <meta name="msapplication-TileImage" content="../assets/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-
     <title>Pomodoro Clock</title>
   </head>
-  <body class="container">
-    <h1 id="time">25:00</h1>
+  <body>
+    <div class="container">
+      <div class="vertical-center">
+        <h1 id="time">25:00</h1>
+        <button class='toggle'>Start</button>
+        <button onclick='resetTimer()'>Reset</button>
 
-    <button class='toggle'>Start</button>  
-    <button onclick='resetTimer()'>Reset</button>
+      </div>
+    </div>
 
-    <audio id='tune' loop> 
+    <audio id='tune' loop>
       <source src='tune.mp3' type='audio/mpeg'>
     </audio>
 
-    <script type='text/javascript' src='script.js'>
-    
-    </script>
+    <script type='text/javascript' src='script.js'></script>
   </body>
 </html>
-
-
-
